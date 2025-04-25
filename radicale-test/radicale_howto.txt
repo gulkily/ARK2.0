@@ -18,3 +18,20 @@ Then do this to add a new user:
 
 sudo apt-get install apache2-utils
 sudo htpasswd -B /etc/radicale/users your_username
+
+#####
+
+To test the manager class:
+
+pip install pytest pytest-asyncio
+pytest -v test_radicale_calendar_manager.py
+
+#####
+
+To run MCP interface:
+
+python3 mcp_radicale_bridge.py
+
+To test MCP interface:
+
+python3 test_mcp_client.py
