@@ -1,4 +1,5 @@
 # used for testing mcp_radicale_bridge.py
+# run mcp_radicale_bridge.py in a separate terminal before running this test
 
 import asyncio
 import websockets
