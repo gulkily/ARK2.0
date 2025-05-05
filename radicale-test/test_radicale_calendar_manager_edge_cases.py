@@ -1,6 +1,35 @@
 """
 Edge case tests for RadicaleCalendarManager.
 This module contains tests for various edge cases and unusual scenarios.
+
+Test Outline:
+1. Multi-day Events
+   - Tests creation and retrieval of events spanning multiple days
+   - Verifies correct duration calculation
+
+2. All-day Events
+   - Tests creation and retrieval of events that last a full day
+   - Verifies events can be found when filtering for the specific day
+
+3. Long Text Fields
+   - Tests events with extremely long text content (500+ chars in summary, 
+     2000+ chars in description, 1000+ chars in location)
+   - Verifies text preservation and handling of large content
+
+4. Duplicate Summaries
+   - Tests handling of multiple events with identical summaries
+   - Verifies events maintain unique IDs and can be distinguished
+
+5. Timezone Handling
+   - Tests events with explicit timezone information (UTC)
+   - Verifies correct storage and retrieval of timezone-aware events
+
+Event Types Tested:
+- Multi-day events (3-day duration)
+- All-day events (full 24-hour events)
+- Events with extremely long text fields
+- Events with duplicate summaries but different times
+- Events with explicit timezone information
 """
 
 import time

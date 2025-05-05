@@ -5,6 +5,39 @@ This module contains comprehensive tests for the RadicaleCalendarManager class,
 which provides an interface to interact with a Radicale CalDAV server.
 The tests cover basic connectivity, calendar operations, and event CRUD operations.
 
+Test Outline:
+1. Connection Tests
+   - Basic connectivity to Radicale server
+   - Principal retrieval
+   - Calendar availability
+
+2. Calendar Operations
+   - Retrieving default calendar
+   - Retrieving specific calendar by name
+   - Handling non-existent calendars
+
+3. Event CRUD Operations
+   - Creating events with required fields
+   - Creating events with all fields
+   - Finding events by summary
+   - Updating event properties
+   - Deleting events
+
+4. Event Types and Properties Tested
+   - Basic events (summary, start, end)
+   - Events with location and description
+   - Events with only required fields (minimal events)
+   - Events with special characters (áéíñ, etc.)
+   - Events with different date ranges (today, tomorrow, next week)
+
+5. Date Filtering
+   - Filtering events by specific day
+   - Filtering events by date range
+   - Filtering events across multiple days
+
+6. Edge Cases
+   - Various edge cases from RadicaleCalendarManagerEdgeTests
+
 Requirements:
 - A running Radicale server
 - Valid credentials in a .env file (RADICALE_URL, RADICALE_USERNAME, RADICALE_PASSWORD)
