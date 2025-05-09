@@ -2,3 +2,5 @@
 
 /model_module/models/*
 /model_module/data/*
+
+radicale-test/.env
